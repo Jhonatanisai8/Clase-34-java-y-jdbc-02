@@ -14,10 +14,7 @@ public class ConexionBaseDatos {
 
     //patron singleton
     public static Connection getInstance() throws SQLException {
-        if (connection == null) {
-            //obtenemos la conexion
-            connection = DriverManager.getConnection(ruta, userName, password);
-        }
-        return connection;
+            //devolvemos una instancia de la conexion a la BD
+        return DriverManager.getConnection(ruta, userName, password);
     }
 }
